@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <version></version>
+  <updatepath></updatepath>
+
+  <items>
+    <item>
+      <title>Main Feed</title>
+      <description></description>
+      <path>http://channel9.msdn.com/Feeds/RSS/</path>
+      <childid></childid>
+      <image>http://mschnlnine.vo.llnwd.net/d1/Dev/App_Themes/C9/images/feedimage.png</image>
+    </item>
+
+    <item>
+      <title>New Today</title>
+      <description></description>
+      <path>http://channel9.msdn.com/Feeds/RSS/</path>
+      <childid></childid>
+      <image>http://mschnlnine.vo.llnwd.net/d1/Dev/App_Themes/C9/images/feedimage.png</image>
+    </item>
+
+    <item>
+      <title>Show</title>
+      <description></description>
+      <path></path>
+      <childid>showitems</childid>
+      <image></image>
+    </item>
+    
+  </items>
+
+  <children>
+    <showitems>
+      <title>Going Deep</title>
+      <description>Charles Torre travels around Microsoft to meet the company’s leading Architects and Engineers to discuss the inner workings of our core technologies. Going Deep is primarily concerned with how things work, why they are designed the way they are, and how they will evolve over time.</description>
+      <path>http://channel9.msdn.com/shows/Going+Deep/feed/wmvhigh/</path>
+      <childid></childid>
+      <image>http://channel9.msdn.com/Link/aaa5dfb5-58b4-45e6-a07c-545ac709c60f/?default=large</image>
+    </showitems>
+    <showitems>
+      <title>ARCast.TV</title>
+      <description>Weekly interviews with influential architects providing perspective and architectural insight.</description>
+      <path>http://channel9.msdn.com/shows/ARCast.TV/feed/wmvhigh/</path>
+      <childid></childid>
+      <image>http://mschnlnine.vo.llnwd.net/d1/Dev/App_Themes/C9/images/feedimage.png</image>
+    </showitems>
+    <showitems>
+      <title>10-4</title>
+      <description>10-4 is a weekly video podcast which gives you a look at what's coming in Visual Studio 2010 and the .NET Framework 4.0. Over and out!</description>
+      <path>http://channel9.msdn.com/shows/10-4/feed/wmvhigh/</path>
+      <childid></childid>
+      <image>http://mschnlnine.vo.llnwd.net/d1/Dev/App_Themes/C9/images/feedimage.png</image>
+    </showitems>
+  </children>
+
+</config>
