@@ -1,0 +1,292 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Configuration/d:Sample/f:Channel9.xml" caret="1450" fromTop="25" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Sample/f:Channel9_RSS.xml" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Selector/f:NewTodayRssSelector.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Selector/f:RssSelector.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Properties/f:AssemblyInfo.cs" caret="2217" fromTop="16" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Loader/f:RssLoader.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/f:MetaDataEnum.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/f:MediaMapper.cs" caret="4330" fromTop="13" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/d:Item/f:MediaItemFactory.cs" caret="2283" fromTop="38" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/d:Item/f:MediaItem.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/d:Folder/f:DefaultMediaFolder.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/d:Folder/f:MediaFolderFactory.cs" caret="3677" fromTop="66" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/d:Folder/d:Base/f:MediaFolder.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="3174" fromTop="18" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginProvider.cs" caret="9650" fromTop="18" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:Extensions.cs" caret="1548" fromTop="35" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PayloadFactory.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:Owner.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:NavigationBuilder.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Parser/f:Channel9RssParser.cs" caret="10082" fromTop="10" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Parser/d:Base/f:RssParser.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Parser/f:ITunesRssParser.cs" caret="1741" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:NavigationBuilder.cs" caret="9554" fromTop="29" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:NavigationBuilder.cs" caret="10314" fromTop="34" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:NavigationBuilder.cs" caret="13541" fromTop="29" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:NavigationBuilder.cs" caret="13433" fromTop="29" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:NavigationBuilder.cs" caret="13028" fromTop="27" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:NavigationBuilder.cs" caret="1245" fromTop="29" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/d:Folder/d:Base/f:MediaFolder.cs" caret="6590" fromTop="18" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:Extensions.cs" caret="632" fromTop="16" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:Extensions.cs" caret="1548" fromTop="35" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Parser/d:Base/f:RssParser.cs" caret="2016" fromTop="11" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Parser/d:Base/f:RssParser.cs" caret="2701" fromTop="18" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Parser/d:Base/f:RssParser.cs" caret="3437" fromTop="18" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/f:MediaMapper.cs" caret="2669" fromTop="11" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/d:Item/f:MediaItemFactory.cs" caret="2283" fromTop="25" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Media/d:Folder/f:MediaFolderFactory.cs" caret="3677" fromTop="6" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="2143" fromTop="18" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="2724" fromTop="24" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="1837" fromTop="14" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="4523" fromTop="18" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="4971" fromTop="23" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="4265" fromTop="14" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="6080" fromTop="18" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="6405" fromTop="22" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="5812" fromTop="13" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="7232" fromTop="18" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="7479" fromTop="23" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="6871" fromTop="13" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:PluginSettings.cs" caret="9481" fromTop="18" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/f:NavigationBuilder.cs" caret="0" fromTop="0" />
+      <File id="B8AC53F6-EB5F-415F-B5C0-6D936C459298/d:Rss/d:Parser/f:Channel9RssParser.cs" caret="7039" fromTop="24" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:Channel9Plugin.MediaFolder">
+      <Item value="CreateFolder" priority="5" />
+      <Item value="RssSelector" priority="1" />
+      <Item value="RssLoader" priority="0" />
+      <Item value="RssParser" priority="3" />
+      <Item value="metaData" priority="4" />
+      <Item value="SetMetaData" priority="2" />
+      <Item value="GetMetaData" priority="1" />
+      <Item value="CreateFolder`0" priority="41" />
+      <Item value="Update`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Default">
+      <Item value="true" priority="2" />
+      <Item value="null" priority="8" />
+      <Item value="internal" priority="4" />
+      <Item value="MediaFolder" priority="2" />
+      <Item value="string" priority="21" />
+      <Item value="thr" priority="0" />
+      <Item value="this" priority="27" />
+      <Item value="title" priority="1" />
+      <Item value="return" priority="16" />
+      <Item value="sourceUrl" priority="1" />
+      <Item value="folder" priority="44" />
+      <Item value="Owner" priority="3" />
+      <Item value="Channel9MediaFolder" priority="1" />
+      <Item value="NavigationBuilder" priority="2" />
+      <Item value="new" priority="16" />
+      <Item value="MediaFolderFactory" priority="0" />
+      <Item value="MediaItemFactory" priority="0" />
+      <Item value="DefaultMediaFolder" priority="1" />
+      <Item value="RssSelector" priority="1" />
+      <Item value="RssLoader" priority="0" />
+      <Item value="if" priority="10" />
+      <Item value="Channel9RssParser" priority="0" />
+      <Item value="else" priority="0" />
+      <Item value="url" priority="0" />
+      <Item value="String" priority="1" />
+      <Item value="item" priority="11" />
+      <Item value="node" priority="1" />
+      <Item value="end" priority="5" />
+      <Item value="text" priority="4" />
+      <Item value="durationString" priority="2" />
+      <Item value="switch" priority="2" />
+      <Item value="case" priority="7" />
+      <Item value="NewTodayRssSelector" priority="0" />
+      <Item value="default" priority="1" />
+      <Item value="break" priority="0" />
+      <Item value="is" priority="0" />
+      <Item value="long" priority="3" />
+      <Item value="out" priority="0" />
+      <Item value="value" priority="4" />
+      <Item value="using" priority="3" />
+      <Item value="System" priority="2" />
+      <Item value="StringComparison" priority="0" />
+      <Item value="private" priority="7" />
+      <Item value="metaData" priority="3" />
+      <Item value="public" priority="1" />
+      <Item value="enum" priority="0" />
+      <Item value="values" priority="4" />
+      <Item value="Length" priority="0" />
+      <Item value="GetMetaData" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="key" priority="0" />
+      <Item value="NameValueCollection" priority="0" />
+      <Item value="doc" priority="1" />
+      <Item value="static" priority="0" />
+      <Item value="XmlNode" priority="1" />
+      <Item value="protected" priority="0" />
+      <Item value="MediaItem" priority="0" />
+      <Item value="int" priority="1" />
+      <Item value="Convert" priority="0" />
+      <Item value="Properties" priority="0" />
+      <Item value="Resources" priority="0" />
+      <Item value="rootFolder" priority="1" />
+      <Item value="Linq" priority="0" />
+      <Item value="Environment`0" priority="1" />
+      <Item value="Owner`0" priority="3" />
+      <Item value="start" priority="0" />
+      <Item value="DateTime`0" priority="0" />
+      <Item value="Stopwatch" priority="1" />
+      <Item value="st" priority="6" />
+      <Item value="try" priority="0" />
+      <Item value="ex" priority="0" />
+      <Item value="SharedMediaFileInfo`0" priority="1" />
+      <Item value="MediaItem`0" priority="1" />
+      <Item value="count" priority="0" />
+      <Item value="IDictionary" priority="0" />
+      <Item value="req" priority="0" />
+      <Item value="for" priority="0" />
+      <Item value="IEnumerable" priority="1" />
+      <Item value="IEquatable" priority="0" />
+      <Item value="String`0" priority="0" />
+      <Item value="ICollection" priority="1" />
+      <Item value="false" priority="37" />
+      <Item value="content" priority="0" />
+      <Item value="durationNode" priority="0" />
+      <Item value="thumbnailNode" priority="0" />
+      <Item value="enclosureNode" priority="0" />
+      <Item value="var" priority="3" />
+      <Item value="from" priority="1" />
+      <Item value="where" priority="1" />
+      <Item value="s" priority="0" />
+      <Item value="base" priority="1" />
+      <Item value="XmlAttribute`0" priority="0" />
+      <Item value="x" priority="0" />
+      <Item value="n" priority="1" />
+      <Item value="extension" priority="0" />
+      <Item value="ProcessVideo`0" priority="0" />
+      <Item value="StringComparison`0" priority="0" />
+      <Item value="ProcessAudio`0" priority="0" />
+      <Item value="ToVideoResource`0" priority="0" />
+      <Item value="ToAudioResource`0" priority="0" />
+      <Item value="const" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Channel9Plugin.Owner">
+      <Item value="Provider" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Channel9Plugin.PluginProvider">
+      <Item value="LogMessage" priority="1" />
+      <Item value="NavigationBuilder" priority="0" />
+      <Item value="FolderFactory" priority="1" />
+      <Item value="ItemFactory" priority="1" />
+      <Item value="LogMessage`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="StartsWith" priority="0" />
+      <Item value="Contains" priority="1" />
+      <Item value="Substring" priority="0" />
+      <Item value="Replace" priority="2" />
+      <Item value="EndsWith`0" priority="0" />
+      <Item value="Substring`0" priority="0" />
+      <Item value="LastIndexOf`0" priority="0" />
+      <Item value="StripHtmlTags`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Globalization.CultureInfo">
+      <Item value="InvariantCulture" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty" priority="1" />
+      <Item value="Empty" priority="3" />
+      <Item value="Format`0" priority="0" />
+      <Item value="Concat`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Channel9Plugin.MediaItem">
+      <Item value="Description" priority="2" />
+      <Item value="Title" priority="0" />
+      <Item value="MediumMediaUrl" priority="1" />
+      <Item value="HighMediaUrl" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Channel9Plugin.Channel9RssParser">
+      <Item value="GetDescription" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int64">
+      <Item value="TryParse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.HttpUtility">
+      <Item value="UrlEncode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.StringComparison">
+      <Item value="InvariantCulture" priority="0" />
+      <Item value="OrdinalIgnoreCase" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Specialized.NameValueCollection">
+      <Item value="Keys" priority="2" />
+      <Item value="GetValues" priority="0" />
+      <Item value="AllKeys" priority="0" />
+      <Item value="Remove" priority="0" />
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Channel9Plugin.NewTodayRssSelector">
+      <Item value="Today" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToDateTime" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Channel9Plugin.Properties.Resources">
+      <Item value="ErrorLabel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="TickCount" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int64">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.Stopwatch">
+      <Item value="Start`0" priority="1" />
+      <Item value="Stop`0" priority="1" />
+      <Item value="Elapsed" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.TimeSpan">
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Channel9Plugin.MediaMapper">
+      <Item value="ProcessVideo`0" priority="0" />
+      <Item value="ProcessAudio`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlNode">
+      <Item value="Attributes" priority="3" />
+      <Item value="ParentNode" priority="0" />
+      <Item value="SelectSingleNode`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Channel9Plugin.RssSelector">
+      <Item value="Select`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlDocument">
+      <Item value="GetElementsByTagName`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files\NUnit 2.4.8\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

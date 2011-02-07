@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <feed name="Main Feed" dynamic="true">
+    <mediaUrl>http://channel9.msdn.com/Feeds/RSS/</mediaUrl>
+    <thumbUrl>http://mschnlnine.vo.llnwd.net/d1/Dev/App_Themes/C9/images/feedimage.png</thumbUrl>
+  </feed>
+  <feed name="New Today" dynamic="true">
+    <mediaUrl>http://channel9.msdn.com/Feeds/RSS/</mediaUrl>
+    <thumbUrl>http://mschnlnine.vo.llnwd.net/d1/Dev/App_Themes/C9/images/feedimage.png</thumbUrl>
+  </feed>
+  
+  <section name="Shows">
+    <feed name="10-4" dynamic="false">
+      <mediaUrl>http://channel9.msdn.com/shows/10-4/feed/wmvhigh/</mediaUrl>
+      <thumbUrl>http://ecn.channel9.msdn.com/o9/previewImages/220/518971_220x165.jpg</thumbUrl>
+    </feed>
+  </section>
+
+  <section name="Series"></section>
+
+  <section name="Code"></section>
+
+  <section name="Media"></section>
+
+  <section name="Technologies"></section>
+
+  <section name="People"></section>
+
+  <section name="Channel 10"></section>
+
+  <section name="MIX Online"></section>
+
+  <section name="Microsoft PDC"></section>
+
+  <section name="TechNet"></section>
+
+  <section name="WindowsClient.Net"></section>
+</root>

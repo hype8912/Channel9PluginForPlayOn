@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <atom:link href="http://www.twogeeksandagirl.com/podcast_feed" rel="self" type="application/rss+xml" />
+    <title>Two Geeks and a Girl</title>
+    <description>Learn how to bring your business, organization, or passion online and be successful! Expert tips, strategies and interviews.</description>
+    <link>http://www.twogeeksandagirl.com</link>
+    <language>en-us</language>
+    <copyright>Copyright 2009</copyright>
+    <lastBuildDate>Mon, 09 Nov 2009 01:15:50 -0500</lastBuildDate>
+    <pubDate>Mon, 09 Nov 2009 01:15:50 -0500</pubDate>
+    <docs>http://www.twogeeksandagirl.com/podcast_feed</docs>
+    <webMaster>scott@twogeeksandagirl.com (Scott DiNitto)</webMaster>
+    <itunes:author>Scott DiNitto</itunes:author>
+    <itunes:subtitle>Bring your business online</itunes:subtitle>
+    <itunes:summary>Learn how to bring your business, organization, or passion online and be successful! Expert tips, strategies and interviews.</itunes:summary>
+    <itunes:owner>
+      <itunes:name>Scott DiNitto</itunes:name>
+      <itunes:email>scott@twogeeksandagirl.com</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>No</itunes:explicit>
+    <itunes:image href="http://www.twogeeksandagirl.com/sites/all/themes/tgaag/images/biglogo.png" />
+    <itunes:keywords>internet,online,development,marketing,podcast,business,organization,sales,web,webpage,internet,sale,sell,merchant,ecommerce,strategies,tips,interviews,interview,expert,photography,drupal,SEO,wordpress,code,develop,php,isp</itunes:keywords>
+    <itunes:category text="Technology">
+      <itunes:category text="Podcasting" />
+    </itunes:category>
+    <item>
+      <title>I'm So Insecure! Introduction to Computer Security</title>
+      <link>http://www.twogeeksandagirl.com/podcast/78</link>
+      <guid>http://www.twogeeksandagirl.com/sites/default/files/podcast/tgaag_security_0.mp3</guid>
+      <description />
+      <enclosure url="http://www.twogeeksandagirl.com/sites/default/files/podcast/tgaag_security_0.mp3" length="24567794" type="audio/mpeg" />
+      <category>Technology</category>
+      <pubDate>Thu, 05 Nov 2009 00:54:04 -0500</pubDate>
+      <itunes:author>Scott @ twogeeksandagirl.com</itunes:author>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:subtitle>Please visit this podcast at http://www.twogeeksandagirl.com/</itunes:subtitle>
+      <itunes:summary>Please visit this podcast at http://www.twogeeksandagirl.com/</itunes:summary>
+      <itunes:duration>0:51:10</itunes:duration>
+      <itunes:keywords>computer,security,hack,hacked,crack,cracked,hacker,forensics,data,system</itunes:keywords>
+    </item>
+  </channel>
+</rss>

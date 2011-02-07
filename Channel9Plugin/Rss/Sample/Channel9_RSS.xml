@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/App_Themes/default/rss.xslt"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:atom="http://www.w3.org/2005/Atom"
+ xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+ xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+ xmlns:media="http://search.yahoo.com/mrss/"
+ xmlns:evnet="http://www.mscommunities.com/rssmodule/">
+  <channel>
+    <title>Channel 9</title>
+    <atom:link rel="self" type="application/rss+xml" href="http://channel9.msdn.com/feeds/rss/default.aspx" />
+    <image>
+      <url>http://mschnlnine.vo.llnwd.net/d1/Dev/App_Themes/C9/images/feedimage.png</url>
+      <title>Channel 9</title>
+      <link>http://channel9.msdn.com/</link>
+    </image>
+    <description>Channel 9 keeps you up to date with the latest news and behind the scenes info from Microsoft that developers love to keep up with. From LINQ to SilverLight  &#226;&#8364;&#8220; Watch videos and hear about all the cool technologies coming and the people behind them.</description>
+    <link>http://channel9.msdn.com/</link>
+    <language>en-us</language>
+    <pubDate>Fri, 06 Nov 2009 02:45:50 GMT</pubDate>
+    <lastBuildDate>Fri, 06 Nov 2009 02:45:50 GMT</lastBuildDate>
+    <generator>EvNet (EvNet, Version=1.0.3599.6114, Culture=neutral, PublicKeyToken=null)</generator>
+    <item>
+      <title>TWC9: Channel 9 Goes Live, Zune, detecting memory leaks, Life at MSFT</title>
+      <description>&lt;img src="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_85_ch9.png" border="0" /&gt;This week on Channel 9, we do our first ever live smooth-streaming episode with special guest Nic Fillingham. On the show we discuss:&lt;br /&gt; &lt;br /&gt; - Our&#194;&#160;&lt;a href="http://www.twitter.com/ch9live"&gt;ch9live Twitter account&lt;/a&gt; to take questions during the show&lt;br /&gt; &lt;br /&gt; - The new &lt;a href="http://www.msn.com/preview.aspx"&gt;MSN page design&lt;/a&gt;&lt;br /&gt; - MSN also &lt; href="http://www.bing.com/community/blogs/search/archive/2009/11/04/msn-and-bing-a-match-made-in-redmond.aspx"&gt;integrates Bing&lt;/a&gt;&lt;br /&gt; - Nic discusses his new &lt;a href="http://www.zune.net/"&gt;Zune HD&lt;/a&gt;&lt;br /&gt; - Sarah Perez - How to make &lt; href="http://www.on10.net/blogs/sarahintampa/How-to-Make-Zune-Compatible-Movies-with-Movie-Maker/"&gt;Zune-compatible movies with Movie Maker&lt;/a&gt;&lt;br /&gt; - Expression Blend 3 &lt;a href="http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;amp;FamilyID=3308511a-fe8b-43b9-840f-02abc4bf6419#tm"&gt;Zune Website Starter Kit&lt;/a&gt;&lt;br /&gt; - Larry Larsen - NBC goes &lt;a href="http://on10.net/blogs/larry/NBC-Winter-Olympics-on-Silverlight/"&gt;Silverlight for Winter Olympics&lt;/a&gt;&lt;br /&gt; - TwinBox - &lt;a href="http://channel9.msdn.com/posts/Tina/Office-Casual-How-to-Twitter-in-Outlook-with-TwInbox/"&gt;How to use Twitter in Outlook&lt;/a&gt;&lt;br /&gt; - &lt;a href="http://windows.microsoft.com/en-us/windows/downloads/personalize"&gt;Windows 7 sponsored theme packs&lt;/a&gt;, via &lt;a href="http://www.istartedsomething.com/20091022/microsoft-releases-windows-7-sponsored-themes/"&gt;Long Zheng&lt;/a&gt;&lt;br /&gt; - Microsoft Press - &lt;a href="http://blogs.msdn.com/microsoft_press/archive/2009/11/02/download-ten-free-windows-7-chapters.aspx"&gt;Ten free Windows 7 book chapters&lt;/a&gt;&lt;br /&gt; - Rudi Grobler - Anatomy of a Windows 7 Tabbed Thumbnail&#194;&#160;&lt;a href="http://dotnet.org.za/rudi/archive/2009/10/14/anatomy-of-the-windows-7-taskbar-tabbedthumbnail-part-1.aspx"&gt;Part 1&lt;/a&gt; &amp;amp; &lt;a href="http://dotnet.org.za/rudi/archive/2009/11/04/anatomy-of-the-windows-7-taskbar-tabbedthumbnail-part-2.aspx"&gt;Part 2&lt;/a&gt;&lt;br /&gt; - Lee Mathews - Download Squad - New tool enables you to &lt;a href="http://www.downloadsquad.com/2009/11/03/vhd-attach-enables-right-click-mounting-and-dismounting-of-vhd-f/"&gt;right-click and mount VHDs&lt;/a&gt;&lt;br /&gt; - Jason Allor -&#194;&#160;&lt;a href="http://blogs.msdn.com/jasonall/archive/2009/10/27/linqlite.aspx"&gt;LinqLite&lt;/a&gt; is a small library of LINQ expressions to simplify building your own LINQ provider, via &lt;a href="http://blogs.msdn.com/brada/archive/2009/10/28/lightweight-linq-parser.aspx"&gt;Brad Abrams&lt;/a&gt;&lt;br /&gt; - Fabrice Marguerie - MSDN - How to detect and&#194;&#160;&lt;a href="http://msdn.microsoft.com/en-us/library/ee658248.aspx"&gt;avoid memory and resource leaks&lt;/a&gt; in .NET applications, via &lt;a href="http://blogs.msdn.com/charlie/archive/2009/11/02/new-article-on-detecting-memory-leaks-net-applications.aspx"&gt;Charlie Calvert&lt;/a&gt;&lt;br /&gt; -&#194;&#160;&lt;a href="http://visualstudiogallery.msdn.microsoft.com/en-us/e5f41ad9-4edc-4912-bca3-91147db95b99"&gt;PowerCommands&lt;/a&gt; for Visual Studio 2010, via &lt;a href="http://coolthingoftheday.blogspot.com/2009/11/visual-studio-2010-power-25-with.html"&gt;Greg Duncan&lt;/a&gt;&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;strong&gt;Picks of the week&lt;br /&gt; &lt;/strong&gt;Dan's pick: - Coding4Fun -&#194;&#160;&lt;a href="http://blogs.msdn.com/coding4fun/archive/2009/10/31/9915768.aspx"&gt;Halloween Gremlins&lt;/a&gt; - Move a mouse, shake the screen, scroll windows and more&lt;br /&gt; Nic's pick: Tina's &lt;a href="http://channel9.msdn.com/posts/Tina/Life-at-Microsoft-The-truth-revealedagain/"&gt;Life at Microsoft video&lt;/a&gt;&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;img src="http://channel9.msdn.com/504573/WebViewBug.aspx?EVT=0" height="1" width="1" alt="" /&gt;</description>
+      <comments>http://channel9.msdn.com/shows/This+Week+On+Channel+9/TWC9-Channel-9-Goes-Live-Zune-detecting-memory-leaks-Life-at-MSFT/</comments>
+      <link>http://channel9.msdn.com/shows/This+Week+On+Channel+9/TWC9-Channel-9-Goes-Live-Zune-detecting-memory-leaks-Life-at-MSFT/</link>
+      <pubDate>Sun, 08 Nov 2009 17:53:00 GMT</pubDate>
+      <guid isPermaLink="false">http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_ch9.wmv</guid>
+      <evnet:views>3590</evnet:views>
+      <evnet:viewtrackingurl>http://channel9.msdn.com/504573/WebViewBug.aspx?EVT=0</evnet:viewtrackingurl>
+      <evnet:previewtext>This week on Channel 9, we do our first ever live smooth-streaming episode with special guest Nic Fillingham. On the show we discuss:&lt;br /&gt; &lt;br /&gt; - Our &lt;a href="http://www.twitter.com/ch9live"&gt;ch9live Twitter account&lt;/a&gt; to take questions during the show&lt;br /&gt; - The new &lt;a href="http://www.msn.com/preview.aspx"&gt;MSN page design&lt;/a&gt;&lt;br /&gt; - MSN also &lt;a href="http://www.bing.com/community/blogs/search/archive/2009/11/04/msn-and-bing-a-match-made-in-redmond.aspx"&gt;integrates Bing&lt;/a&gt;&lt;br /&gt;</evnet:previewtext>
+      <media:thumbnail url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_320_ch9.png" height="240" width="320" />
+      <media:thumbnail url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_85_ch9.png" height="64" width="85" />
+      <media:group>
+        <media:content url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_ch9.mp4" expression="full" duration="2603" fileSize="266670919" type="video/mp4" medium="video" />
+        <media:content url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_ch9.mp3" expression="full" duration="2603" fileSize="20830149" type="audio/mp3" medium="audio" />
+        <media:content url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_ch9.mp4" expression="full" duration="2603" fileSize="266670919" type="video/mp4" medium="video" />
+        <media:content isDefault="true" url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_ch9.wma" expression="full" duration="2603" fileSize="21060007" type="audio/x-ms-wma" medium="audio" />
+        <media:content isDefault="true" url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_ch9.wmv" expression="full" duration="2603" fileSize="389865969" type="video/x-ms-wmv" medium="video" />
+        <media:content url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_2MB_ch9.wmv" expression="full" duration="2603" fileSize="522889217" type="video/x-ms-wmv" medium="video" />
+        <media:content url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_Zune_ch9.wmv" expression="full" duration="2603" fileSize="242762021" type="video/x-ms-wmv" medium="video" />
+        <media:content url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_512_ch9.png" expression="full" duration="2603" type="image/jpeg" medium="image" />
+        <media:content url="http://ss.channel9.msdn.com/ch9/3/7/5/4/0/5/ThisWeekC9Nov7.ism/Manifest" expression="full" duration="2603" type="video/x-ms-wmv" medium="video" />
+      </media:group>
+      <enclosure url="http://ecn.channel9.msdn.com/o9/ch9/3/7/5/4/0/5/ThisWeekC9Nov7_ch9.wmv" length="389865969" type="video/x-ms-wmv" />
+      <dc:creator>Dan Fernandez</dc:creator>
+      <slash:comments>2</slash:comments>
+      <wfw:commentRss>http://channel9.msdn.com/shows/This+Week+On+Channel+9/TWC9-Channel-9-Goes-Live-Zune-detecting-memory-leaks-Life-at-MSFT/RSS/</wfw:commentRss>
+      <trackback:ping>http://channel9.msdn.com/504573/Trackback.aspx</trackback:ping>
+    </item>
+  </channel>
+</rss>
