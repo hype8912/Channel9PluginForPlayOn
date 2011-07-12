@@ -1,0 +1,1014 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Util</name>
+    </assembly>
+    <members>
+        <member name="T:MediaMallTechnologies.Util.SerializationWriter">
+            <summary>
+            Extends BinaryWriter to add additional data types,
+            handle null strings and simplify use with ISerializable.
+            </summary>
+            <exclude></exclude>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationWriter.GetWriter">
+            <summary>
+            Static method to initialise the writer with a suitable MemoryStream.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationWriter.Write(System.String)">
+            <summary>
+            Writes a string to the buffer.
+            Overrides the base implementation so it can cope with nulls.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationWriter.Write(System.Byte[])">
+            <summary>
+            Writes a byte array to the buffer. Overrides the base implementation to
+            send the length of the array which is needed when it is retrieved.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationWriter.Write(System.Char[])">
+            <summary>
+            Writes a char array to the buffer. Overrides the base implementation to
+            sends the length of the array which is needed when it is read.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationWriter.Write(System.DateTime)">
+            <summary>
+            Writes a DateTime to the buffer.
+            </summary>summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationWriter.Write(System.Collections.ArrayList)">
+            <summary>
+            Writes an ArrayList to the buffer.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationWriter.Write(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Writes a NameValueCollection to the buffer.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationWriter.WriteObject(System.Object)">
+            <summary>
+            Writes an arbitrary object to the buffer. Useful where we have something of type "object"
+            and don't know how to treat it. This works out the best method to use to write to the buffer.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationWriter.AddToInfo(System.Runtime.Serialization.SerializationInfo,System.String)">
+            <summary>
+            Adds the SerializationWriter buffer to the SerializationInfo at the end of GetObjectData().
+            </summary>
+        </member>
+        <member name="T:MediaMallTechnologies.Util.SerializationReader">
+            <summary>
+            Extends BinaryReader to add additional data types,
+            handle null strings and simplify use with ISerializable.
+            </summary>
+            <exclude></exclude>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationReader.GetReader(System.Runtime.Serialization.SerializationInfo,System.String)">
+            <summary>
+            Static method to take a SerializationInfo object (an input to an ISerializable constructor)
+            and produce a SerializationReader from which serialized objects can be read.
+            </summary>.
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationReader.ReadString">
+            <summary>
+            Reads a string from the buffer. Overrides the base implementation so it can cope with nulls.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationReader.ReadByteArray">
+            <summary>
+            Reads a byte array from the buffer, handling nulls and the array length.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationReader.ReadCharArray">
+            <summary>
+            Reads a char array from the buffer, handling nulls and the array length.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationReader.ReadDateTime">
+            <summary>
+            Reads a DateTime from the buffer.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationReader.ReadArrayList">
+            <summary>
+            Reads an ArrayList from the buffer.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationReader.ReadNameValueCollection">
+            <summary>
+            Reads a NameValueCollection from the buffer.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SerializationReader.ReadObject">
+            <summary>
+            Reads an object which was added to the buffer by WriteObject.
+            </summary>
+        </member>
+        <member name="T:MediaMallTechnologies.Util.PropertyTable">
+            <summary>
+            Manages property configuration tables. This class is little more than
+            a simplified wrapper to a standard .NET Hashtable.
+            </summary>
+            <exclude></exclude>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.PropertyTable.Load(System.IO.StreamReader)">
+            <summary>
+            Returns a Hashtable of properties from the given StreamReader.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.PropertyTable.Load(System.String)">
+            <summary>
+            Loads a Hashtbale of properties from the given filename.
+            </summary>
+            <param name="filename">The name of the file to load from.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.PropertyTable.Item(System.String,System.Object)">
+            <summary>
+            Returns the object for the given name, or the default value if none exists.
+            </summary>
+            <param name="name">The name of the property to query.</param>
+            <param name="defaultValue">The default value for the property if none exists.</param>
+            <returns>The object value for the given name, or the default value if none exists.</returns>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.PropertyTable.StringItem(System.String,System.String)">
+            <summary>
+            Returns the string value for the given name, or the default value if none exists.
+            </summary>
+            <param name="name">The name of the property to query.</param>
+            <param name="defaultValue">The default value for the property if none exists.</param>
+            <returns>The string value for the given name, or the default value if none exists.</returns>
+        </member>
+        <member name="T:MediaMallTechnologies.Plugin.IPlayOnProvider">
+            <summary>
+            Main interface for content provider plugins.
+            </summary>
+            <remarks>
+            A given plugin must contain one and only one class
+            that implements this interface. This class is able to provide metadata for hierarchical folder and video stream
+            information suitable for display on a DLNA-compliant media renderer. 
+            </remarks>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.IPlayOnProvider.GetSharedMedia(System.String,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Returns a <see cref="T:MediaMallTechnologies.Plugin.Payload">Payload</see> for the given ID and request parameters.
+            </summary>
+            <remarks>
+            This method is the main function for returning hierarchical metadata for folders
+            and items. The <see cref="T:MediaMallTechnologies.Plugin.Payload">Payload</see> object that is returned
+            must contain the appropriate metadata result from the query itself, as well as any potential
+            <see cref="T:MediaMallTechnologies.Plugin.SharedMediaFileInfo">SharedMediaFileInfo</see> and
+            <see cref="T:MediaMallTechnologies.Plugin.SharedMediaFolderInfo">SharedMediaFolderInfo</see> objects.
+            </remarks>
+            <param name="id">The ID requested, as provided from a previous GetSharedMedia query.</param>
+            <param name="includeChildren">Indicator whether children items should be included in the Payload.</param>
+            <param name="startIndex">The starting index for items that should be included in the Payload.</param>
+            <param name="requestCount">The total maximum count of items to be returned in the Payload.</param>
+            <returns>A Payload object that matches the requested query.</returns>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.IPlayOnProvider.Resolve(MediaMallTechnologies.Plugin.SharedMediaFileInfo)">
+            <summary>
+            Resolves a given <see cref="T:MediaMallTechnologies.Plugin.SharedMediaFileInfo">SharedMediaFileInfo</see>
+            if further logic is required
+            to obtain the media URL or to include advertisement URL's, and returns XML information
+            about these URL's.
+            </summary>
+            <remarks>
+            The main video URL must include a "type" param that is either "wmp" (for Windows Media Player)
+            or "fp" (for Flash Player) to indicate what type of player is used to display
+            the given source media. The optional "startTime" param indicates a start time for the source media,
+            in 100-nanoseconds. <b>Note that the "startTime" param only works when the "type" is "wmp".</b>
+            Advertisments must include the timestamp in
+            100-nanoseconds for when they should be shown, relative to the main media playback, and also include a "type" parameter.
+            
+            The XML format is as follows:
+            <code>
+            <![CDATA[
+            <media>
+              <url type="wmp|fp" [startTime="100-nanos"]>...</url>
+              <ad timestamp="100-nanos" type="wmp|fp">...</ad>
+              <ad timestamp="100-nanos" type="wmp|fp">...</ad>
+            </media>
+            ]]>
+            </code>
+            
+            The "type" parameter must be one of either "wmp" or "fp". The 100-nanoseconds
+            parameters must be non-negative numerical values, and are expressed as <i>seconds</i> * 10^7.
+            </remarks>
+            <param name="fileInfo">The SharedMediaFileInfo object that should be resolved.</param>
+            <returns>The XML description of URL's for video playback.</returns>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.IPlayOnProvider.SetPlayOnHost(MediaMallTechnologies.Plugin.IPlayOnHost)">
+            <summary>
+            Sets the given <see cref="T:MediaMallTechnologies.Plugin.IPlayOnHost">IPlayOnHost</see> for this plugin.
+            </summary>
+            <remarks>This method is guaranteed to be called once and only once, immediately after the plugin is instantiated.
+            This gives all plugins the opportunity to initialize their state, and to query for custom
+            properties via
+            <see cref="P:MediaMallTechnologies.Plugin.IPlayOnHost.Properties">IPlayOnHost.Properties</see>.
+            The host object should be cached by the plugin instance for future reference.</remarks>
+            <param name="host">The IPlayOnHost instance that owns this plugin.</param>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnProvider.Name">
+            <summary>
+            Returns the human-readable name of this plugin.
+            </summary>
+            <returns>The name of this plugin.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnProvider.ID">
+            <summary>
+            Returns a unique ID for this provider, no longer than 24 characters.
+            </summary>
+            <remarks>
+            The ID for a plugin should preferably be a combination of the unique domain namespace for the creator of the plugin
+            and the human-readable name of the plugin, in all lower case and without spaces, and with a maximum of 24 characters. This ID 
+            must be prepended to all media and folder ID's, followed by
+            a hyphen, and postpended with GUID's, as in <i>pluginname-guid</i>.
+            <para>
+            Note that since the suggested plugin ID's are human readable, there is always a risk of name
+            clashes with other plugins, so be sure to choose an ID that you are confident is "unique", but no
+            longer than 24 characters.
+            </para>
+            </remarks>
+            <example>
+            A plugin named "My Plugin" created by "example.com" could have a root level ID of 
+            "example.myplugin", and all sub-items and sub-folders with ID's as "example.myplugin-<i>GUID</i>".
+            </example>
+            <returns>The string ID for this root level plugin, no longer than 24 characters.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnProvider.Image">
+            <summary>
+            Returns an Image icon for this content provider.
+            </summary>
+            <remarks>
+            The image must be 78 x 78 pixels. PNG format images are preferred. This image will be potentially displayed
+            by client media devices as the root folder for this plugin, if such display is possible for the given device.
+            </remarks>
+            <returns>The Image for this plugin.</returns>
+        </member>
+        <member name="T:MediaMallTechnologies.Plugin.IPlayOnProviderSettings">
+            <summary>
+            Main interface for content provider plugins to specify PlayOn Settings components and logic.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.TestLogin(System.String,System.String)">
+            <summary>
+            Returns whether the indicated login parameters work successfully.
+            </summary>
+            <remarks>
+            Is never invoked
+            unless <see cref="P:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.RequiresLogin">IPlayOnProviderSettings.RequiresLogin</see>
+            is also true. If successful, the values will be encrypted
+            and stored locally on the PC, and returned via the
+            <see cref="P:MediaMallTechnologies.Plugin.IPlayOnHost.Properties">IPlayOnHost.Properties</see> field
+            as "username" and "password".
+            </remarks>
+            <param name="username">The username or email address to login with.</param>
+            <param name="password">The password to login with.</param>
+            <returns><b>true</b> if the login test works, <b>false</b> otherwise.</returns>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.CheckForUpdate">
+            <summary>
+            Checks to see if an update is available for the given plugin (presumably online).
+            </summary>
+            <remarks>This function should check (presumably somewhere online) to see if a newer
+            version of the plugin is available for download. If so, it should return
+            a URL to navigate to in the user's browser for upgrade instructions, or <b>null</b> if no
+            update is available or required.
+            
+            Note that this method will be called every time PlayOn Settings is opened. It is the responsibility of
+            this plugin to moderate any web requests that may otherwise overwhelm a web server with version check requests.
+            </remarks>
+            <returns>A string value of a URL to browse to for download instructions; otherwise <b>null</b></returns>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.ConfigureOptions(System.Collections.Specialized.NameValueCollection,System.EventHandler)">
+            <summary>
+            Allows a plugin to show a custom configuration window to set custom string value options.
+            </summary>
+            <remarks>Allows a plugin to show its own separate configuration window, and make changes to
+            a NameValueCollection of keys and values,
+            which will be cached and can be queried later
+            through <see cref="P:MediaMallTechnologies.Plugin.IPlayOnHost.Properties">IPlayOnHost.Properties</see>.
+            <para>
+            When <see cref="P:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.HasOptions">HasOptions</see> 
+            returns <b>true</b>, an "Options" button will
+            be available for this plugin in PlayOn Settings. When pressed, the button will invoke this
+            function to retrieve a custom Control that will be displayed in a modal dialog for the user.
+            This custom Control can initialize based on the arbitrary values in the <i>options</i> parameter.
+            Any changes that the user makes through the user interface must then be reflected directly
+            in the <i>options</i> reference, such that they can then be cached by PlayOn.
+            </para>
+            <para>
+            It is critical that the supplied System.EventHandler be invoked whenever the user makes any
+            relevant changes in the custom Control, so that an Apply/Save button can be appropriately enabled.
+            </para>
+            <para>
+            <b>IMPORTANT:</b> The key names "username" and "password" are reserved and must not be used or
+            modified through this method. Instead, these login parameters are used in the 
+            <see cref="M:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.TestLogin(System.String,System.String)">TestLogin</see> method.
+            </para>
+            </remarks>
+            <param name="options">A NameValueCollection of options as cached by PlayOn, and that can 
+            be modified through the custom Control. Any changes made by the user on the custom
+            Control must be applied to this collection, so that PlayOn can cache the values.</param>
+            <param name="changeHandler">An EventHandler that should be invoked whenever changes are
+            made by the user on the custom Control. This EventHandler is used to indicate to PlayOn
+            Settings that changes have occurred, so that an Apply/Save button can be appropriately enabled.</param>
+            <returns>A Control that has configurable options that the user can adjust.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.Image">
+            <summary>
+            Returns an Image icon for this content provider.
+            </summary>
+            <remarks>The image must be minimum 48 x 48 pixels. PNG format images are preferred.</remarks>
+            <returns>The Image for this plugin, to be displayed in PlayOn Settings.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.Link">
+            <summary>
+            Returns an HTTP link to the provider's homepage.
+            </summary>
+            <remarks>
+            This property should return an HTTP link <i>without</i> the prepended "http://".
+            </remarks>
+            <returns>A string value URL link for this plugin provider.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.Name">
+            <summary>
+            Returns the display name that will show in the plugin tab of PlayOn Settings.
+            </summary>
+            <returns>A string value for the name of this plugin provider.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.ID">
+            <summary>
+            Returns a unique ID used for caching and identifying the settings for this plugin.
+            </summary>
+            <remarks>
+            The settings ID should be a GUID, to avoid name clashes with other plugins. This ID is
+            only used for caching optional settings for the plugin, and is never displayed to the user.
+            </remarks>
+            <returns>The string ID for the settings for this plugin.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.Description">
+            <summary>
+            Returns a text description that will show in the plugin tab of PlayOn Settings.
+            </summary>
+            <remarks>The description value should be a maximum of approximately 20 words.</remarks>
+            <returns>A string value description for this plugin.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.RequiresLogin">
+            <summary>
+            Returns whether a login control should be displayed.
+            </summary>
+            <remarks>A plugin is optionally able to include account login information. If this property
+            returns <b>true</b> then a login user control with test button will be displayed automatically
+            on the configuration pane for this plugin in PlayOn Settings. </remarks>
+            <seealso cref="M:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.TestLogin(System.String,System.String)">IPlayOnProviderSettings.TestLogin</seealso>
+            <returns><b>true</b> if this plugin should include an account login user control, <b>false</b> otherwise.
+            </returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.HasOptions">
+            <summary>
+            Returns whether this plugin has custom configurable options.
+            </summary>
+            <remarks>A plugin is optionally able to have arbitrary custom options in a separate window. If this property
+            returns <b>true</b> then an "Options" button will be visible and enabled in PlayOn Settings for this plugin.
+            When the user presses this button, the
+            <see cref="M:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.ConfigureOptions(System.Collections.Specialized.NameValueCollection,System.EventHandler)">IPlayOnProviderSettings.ConfigureOptions</see>
+            method will be invoked.</remarks>
+            <seealso cref="M:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.ConfigureOptions(System.Collections.Specialized.NameValueCollection,System.EventHandler)">IPlayOnProviderSettings.ConfigureOptions</seealso>
+            <returns><b>true</b> if this plugin has custom configurable options, <b>false</b> otherwise.
+            </returns>
+        </member>
+        <member name="T:MediaMallTechnologies.Plugin.IPlayOnHost">
+            <summary>
+            Main interface that hosts a content provider plugin.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.IPlayOnHost.LogMessage(System.String)">
+            <summary>
+            Instructs the PlayOn host to log the given message for debugging purposes.
+            </summary>
+            <remarks>
+            Writes to a file in the MediaMall application directory as the name of the plugin with a .log extension.</remarks>
+            <param name="message">The string value message to log.</param>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnHost.MaximumAllowedBitrate">
+            <summary>
+            Returns the maximum allowed bitrate (in kbps) for online video sources, as determined by the PlayOn host.
+            </summary>
+            <remarks>
+            This property can be used for a plugin to determine which source media streams are appropriate
+            for the given bandwidth and processing capabilities of the PC. The value 0 indicates there is no detected maximum.</remarks>
+            <returns>The maximum allowed bitrate in kbps as determined by the host. If there is no maximum, 0 is returned.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.IPlayOnHost.Properties">
+            <summary>
+            Returns arbitrary string properties that are bound to a hosted plugin.
+            </summary>
+            <remarks>
+            The values returned in this field are those which can be set through
+            <see cref="M:MediaMallTechnologies.Plugin.IPlayOnProviderSettings.ConfigureOptions(System.Collections.Specialized.NameValueCollection,System.EventHandler)">IPlayOnProviderSettings.ConfigureOptions</see>
+            in PlayOn Settings. In addition, if the plugin has login data, these values will also be
+            returned, keyed as "username" and "password".</remarks>
+            <returns>A NameValueCollection with keyed properties.</returns>
+        </member>
+        <member name="T:MediaMallTechnologies.Util.RSAPublicKey">
+            <summary>
+            Manages keys for RSA cryptography.
+            </summary>
+            <exclude></exclude>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.RSAPublicKey.ParsePublicKey(System.String)">
+            <summary>
+            Creates a new instance based on the given RSA pulbic key values in XML format
+            </summary>
+            <param name="certificate">The XML-based key parameters</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.RSAPublicKey.#ctor(System.Byte[],System.Byte[])">
+            <summary>
+            Creates a new instance based on the given modulus and exponent.
+            </summary>
+            <param name="modulus">The RSA modulus</param>
+            <param name="exponent">The RSA exponent</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.RSAPublicKey.Encrypt(System.String)">
+            <summary>
+            Encrypts the given plaintext and returns the encrypted byte[].
+            Throws System.Security.Cryptography.CryptographicException
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Util.RSAPublicKey.Exponent">
+            <summary>
+            Returns the RSA exponent.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Util.RSAPublicKey.Modulus">
+            <summary>
+            Returns the RSA modulus.
+            </summary>
+        </member>
+        <member name="T:MediaMallTechnologies.Util.XmlUtils">
+            <summary>
+            Utility class for easily extracting XML data from XML strings.
+            </summary>
+            <exclude></exclude>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.XmlUtils.FindFirstElement(System.String,System.String)">
+            <summary>
+            Returns the first SimpleElement within the given XML by the given tag name.
+            </summary>
+            <param name="xml">The XML string</param>
+            <param name="name">The tag name to search for</param>
+            <returns></returns>
+        </member>
+        <member name="T:MediaMallTechnologies.Util.SimpleDOMParser">
+            <summary>
+            Parses XML.
+            </summary>
+            <exclude></exclude>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SimpleDOMParser.#ctor">
+            <summary>
+            Creates a new instance.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SimpleDOMParser.parse(System.Xml.XmlTextReader)">
+            <summary>
+            Returns the root SimpleElement from the given XmlTextReader.
+            </summary>
+        </member>
+        <member name="T:MediaMallTechnologies.Util.SimpleElement">
+            <summary>
+            XML tag.
+            </summary>
+            <exclude></exclude>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SimpleElement.#ctor(System.String)">
+            <summary>
+            Initializes a new instance with the given tag name.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SimpleElement.Attribute(System.String)">
+            <summary>
+            Returns the value for the given attribute name.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SimpleElement.setAttribute(System.String,System.String)">
+            <summary>
+            Sets the value for the given attribute name.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Util.SimpleElement.TagName">
+            <summary>
+            The tag name.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Util.SimpleElement.Text">
+            <summary>
+            The internal text within the tags.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Util.SimpleElement.ChildElements">
+            <summary>
+            SimpleElements collection of all children.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Util.SimpleElement.Attributes">
+            <summary>
+            List of string based attributes on this tag.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Util.SimpleElement.InnerXml">
+            <summary>
+            Returns the full inner XML within this tag, if any.
+            </summary>
+        </member>
+        <member name="T:MediaMallTechnologies.Util.SimpleElements">
+            <summary>
+            Collection for SimpleElement instances.
+            </summary>
+            <exclude></exclude>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SimpleElements.Add(MediaMallTechnologies.Util.SimpleElement)">
+            <summary>
+            Adds a new SimpleElement instance to the collection.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SimpleElements.Item(System.Int32)">
+            <summary>
+            Returns the SimpleElement instance at the given index.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Util.SimpleElements.ToArray">
+            <summary>
+            Converts this collection to an object[] array.
+            </summary>
+        </member>
+        <member name="T:MediaMallTechnologies.Plugin.Payload">
+            <summary>
+            Contains arbitrary items in a list that can be sent between applications.
+            </summary>
+            <remarks>This is
+            the main object that is used to return lists of
+            <see cref="T:MediaMallTechnologies.Plugin.SharedMediaFileInfo">SharedMediaFileInfo</see> and
+            <see cref="T:MediaMallTechnologies.Plugin.SharedMediaFolderInfo">SharedMediaFolderInfo</see>
+            instances, based on queries made through
+            <see cref="M:MediaMallTechnologies.Plugin.IPlayOnProvider.GetSharedMedia(System.String,System.Boolean,System.Int32,System.Int32)">IPlayOnProvider.GetSharedMedia()</see>.
+            </remarks>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.Payload.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance from deserialization.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.Payload.#ctor(System.String,System.String,System.String,System.Int32,System.Collections.Generic.ICollection{MediaMallTechnologies.Plugin.AbstractSharedMediaInfo})">
+            <summary>
+            Initializes a new instance with the given title and the given ArrayList of 
+            <see cref="T:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo">AbstractSharedMediaInfo</see> objects.
+            </summary>
+            <param name="id">The unique ID for this payload.</param>
+            <param name="parentId">The unique ID for the owner that represents this payload.</param>
+            <param name="title">The name for this payload.</param>
+            <param name="totalCount">The total number of matching items for this payload. May be larger
+            than the count of actual items in the embedded ArrayList.</param>
+            <param name="items">The ICollection of items for this payload.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.Payload.#ctor(System.String,System.String,System.String,System.Int32,System.Collections.Generic.ICollection{MediaMallTechnologies.Plugin.AbstractSharedMediaInfo},System.Boolean)">
+            <summary>
+            Initializes a new instance with the given title and the given ArrayList of 
+            <see cref="T:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo">AbstractSharedMediaInfo</see> objects.
+            </summary>
+            <param name="id">The unique ID for this payload.</param>
+            <param name="parentId">The unique ID for the owner that represents this payload.</param>
+            <param name="title">The name for this payload.</param>
+            <param name="totalCount">The total number of matching items for this payload. May be larger
+            than the count of actual items in the embedded ArrayList.</param>
+            <param name="items">The ICollection of items for this payload.</param>
+            <param name="isContainer"><b>true</b> if this payload represents a container, <b>false</b> otherwise.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.Payload.#ctor(System.String,System.String,System.String,System.Int32,System.Collections.Generic.ICollection{MediaMallTechnologies.Plugin.AbstractSharedMediaInfo},System.Boolean,System.String)">
+            <summary>
+            Initializes a new instance with the given title and the given ArrayList of 
+            <see cref="T:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo">AbstractSharedMediaInfo</see> objects.
+            </summary>
+            <param name="id">The unique ID for this payload.</param>
+            <param name="parentId">The unique ID for the owner that represents this payload.</param>
+            <param name="title">The name for this payload.</param>
+            <param name="totalCount">The total number of matching items for this payload. May be larger
+            than the count of actual items in the embedded ICollection.</param>
+            <param name="items">The ICollection of items for this payload.</param>
+            <param name="isContainer"><b>true</b> if this payload represents a container, <b>false</b> otherwise.</param>
+            <param name="upnpClass">The UPnP class (upnp:class) for this Payload and its items, or null for default.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.Payload.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serializes this instance.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.Payload.Items">
+            <summary>
+            The List of <see cref="T:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo">AbstractSharedMediaInfo</see>
+            items contained in this instance.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.Payload.Id">
+            <summary>
+            Gets the ID of this Payload.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.Payload.ParentId">
+            <summary>
+            Gets the optional parent ID of this instance.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.Payload.Title">
+            <summary>
+            The display title of this instance.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.Payload.UPnPClass">
+            <summary>
+            The UPnP class for this instance.
+            </summary>
+            <remarks>
+            This field is used to construct the upnp:class tag. By default, this value is "object.container.storageFolder".
+            </remarks>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.Payload.TotalCount">
+            <summary>
+            The total count represented by this instance (not the count of the subset of items).
+            </summary>
+            <remarks>
+            When a Payload object is returned for a query, this value represents the 
+            total matching items for that given query. If the query specifies a limited subset
+            of items, the total count will still represent the total matching count.
+            </remarks>
+            <returns>The total matching count for this Payload.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.Payload.IsContainer">
+            <summary>
+            Returns <b>true</b> if this is a container, <b>false</b> otherwise.
+            </summary>
+            <remarks>
+            Returns <b>true</b> if this Payload represents the results of a container search, <b>false</b>
+            otherwise. (A metadata search of a single item will return <b>false</b> for IsContainer,
+            and the first item in the <see cref="P:MediaMallTechnologies.Plugin.Payload.Items">Items</see> array will contain
+            the single <see cref="T:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo">AbstractSharedMediaInfo</see> item.)
+            </remarks>
+        </member>
+        <member name="T:MediaMallTechnologies.Plugin.VideoResource">
+            <summary>
+            Contains metadata information suitable for a ContentDirectory service based on a local or online video file.
+            </summary>
+        </member>
+        <member name="T:MediaMallTechnologies.Plugin.SharedMediaFileInfo">
+            <summary>
+            Contains metadata information suitable for a ContentDirectory service based on a physical media file
+            or online media stream.
+            </summary>
+        </member>
+        <member name="T:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo">
+            <summary>
+            Abstract superclass for metadata for ContentDirectory items.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance from deserialization.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo.#ctor(System.String,System.String,System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="id">The unique ID of this instance</param>
+            <param name="ownerId">The unique ID of the owner of this instance</param>
+            <param name="title">The display name</param>
+            <param name="thumbnailUrl"></param>
+            <param name="metadata">A list of optional string-based name/value pairs for arbitrary metadata. Can be <b>null</b>.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serializes this instance.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo.Id">
+            <summary>
+            Unique ID of this instance.
+            </summary>
+            <remarks>
+            All ID's must conform to the format <i>name</i>-<i>GUID</i>, where
+            <i>name</i> is the unique named ID for the root-level container that owns
+            this instance, and <i>GUID</i> is a unique GUID. If this instance is
+            a root level container itself, then the ID should just be <i>name</i>.
+            </remarks>
+            <example>An example ID for a root level container would be "myprovider". An example ID
+            for a sub-container or item would be "myprovider-00000000-0000-0000-0000-000000000000".</example>
+            <returns>The unique ID for this instance.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo.OwnerId">
+            <summary>
+            Unique ID of the owner of this instance.
+            </summary>
+            <returns>The unique ID for the owner of this instance.</returns>
+            <seealso cref="P:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo.Id">AbstractSharedMediaInfo.Id</seealso>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo.Title">
+            <summary>
+            Display name.
+            </summary>
+            <returns>The display name for this instance.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo.ThumbnailUrl">
+            <summary>
+            A URL or local path to an image icon or thumbnail for this metadata.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AbstractSharedMediaInfo.MetadataProperties">
+            <summary>
+            The string-based name/value pairs for arbitrary and optional metadata.
+            </summary>
+            <remarks>
+            The following keys are optional:
+            <list type="table">
+            <listheader>
+            <term>Key Name</term>
+            <description>Description</description>
+            </listheader>
+            <item><term>ContentRating</term>
+            <description>The MPAA rating.</description></item>
+            <item><term>Rating</term>
+            <description>The star or user rating.</description></item>
+            <item><term>SortIndex</term>
+            <description>An optional prefix to help with sorting, primarily for Xbox 360 (which always sorts alphabetically).</description></item>
+            </list>
+            </remarks>
+            <returns>A NameValueCollection of arbitrary and optional metadata.</returns>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.SharedMediaFileInfo.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance from deserialization.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.SharedMediaFileInfo.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes a new instance with the given metadata properties.
+            </summary>
+            <remarks>
+            The <i>sourceId</i> parameter is used to recycle previously utilized ID's for
+            the exact same source media. Typically, this field would be a unique key as defined
+            by the content provider, and which is guaranteed to remain constant over time. Examples include
+            a unique URL for a given piece of media, or a specific media ID assigned by the content provider.</remarks>
+            <param name="id">The unique ID of this instance. Required.</param>
+            <param name="ownerId">The unique ID of the <see cref="T:MediaMallTechnologies.Plugin.SharedMediaFolderInfo">SharedMediaFolderInfo</see>
+            that contians this instance. Required.</param>
+            <param name="title">The display name. Required.</param>
+            <param name="path">The physical path of the file, or URL to the online stream. Required.</param>
+            <param name="description">An optional textual description of this media. If no description is available, set this to <b>null</b> or an empty string.</param>
+            <param name="thumbnailUrl">A URL or local path to an image icon or thumbnail for this media.</param>
+            <param name="date">The date timestamp for this media. If none is available, set to <b>DateTime.MinValue</b>.</param>
+            <param name="sourceId">A unique string that identifies this media as defined by the content provider. Required.</param>
+            <param name="mediaProperties">A list of optional string-based name/value pairs for arbitrary metadata. Can be <b>null</b>.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.SharedMediaFileInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Overridden from superclass to serialize this instance.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.SharedMediaFileInfo.Path">
+            <summary>
+            The physical file path or online media URL.
+            </summary>
+            <returns>The physical file path or online media URL for this media.</returns>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.SharedMediaFileInfo.Description">
+            <summary>
+            A textual description of this media.
+            </summary>
+            <remarks>If no description is available, this property should be set to <b>null</b> or an empty string.</remarks>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.SharedMediaFileInfo.Date">
+            <summary>
+            The date timestamp for this media.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.SharedMediaFileInfo.SourceId">
+            <summary>
+            A unique string that identifies this media as defined by the content provider.
+            </summary>
+            <remarks>
+            This property is used to recycle previously utilized ID's for
+            the exact same source media. Typically, this field would be a unique key as defined
+            by the content provider, and which is guaranteed to remain constant over time. Examples include
+            a unique URL for a given piece of media, or a specific media ID assigned by the content provider.
+            </remarks>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.SharedMediaFileInfo.FileSize">
+            <summary>
+            The size of this media, in bytes, or 0 if unknown.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.VideoResource.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance from deserialization.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.VideoResource.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.Collections.Specialized.NameValueCollection,System.Int64,System.Int32,System.String,System.String)">
+            <summary>
+            Initializes a new instance with the given metadata properties.
+            </summary>
+            <param name="id">The unique ID of this instance. Required.</param>
+            <param name="ownerId">The unique ID of the <see cref="T:MediaMallTechnologies.Plugin.SharedMediaFolderInfo">SharedMediaFolderInfo</see>
+            that contians this instance. Required.</param>
+            <param name="title">The display name. Required.</param>
+            <param name="path">The physical path of the file, or URL to the online media. Required.</param>
+            <param name="description">An optional textual description of this media. If no description is available, set this to <b>null</b> or an empty string.</param>
+            <param name="thumbnailUrl">A URL or local path to an image icon or thumbnail for this media.</param>
+            <param name="date">The date timestamp for this media. If none is available, set to <b>DateTime.MinValue</b>.</param>
+            <param name="sourceId">A unique string that identifies this media as defined by the content provider. Required.</param>
+            <param name="mediaProperties">A list of optional string-based name/value pairs for arbitrary metadata. Can be <b>null</b>.</param>
+            <param name="duration">The length of this media in milliseconds. Set to 0 if unavailable.</param>
+            <param name="bitrate">The bitrate of this media (in bps). Set to 0 if unavailable.</param>
+            <param name="resolution">The resolution (dimenisions) of this media in pixels, expressed as "<i>width</i>x<i>height</i>".
+            Set to <b>null</b> or empty string if unavailable.</param>
+            <param name="genre">The genre of this media. Set to <b>null</b> or empty string if unavailable.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.VideoResource.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Overridden from superclass to serialize this instance.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.VideoResource.Duration">
+            <summary>
+            The length of this media in milliseconds, or 0 if not available.
+            </summary>
+            <remarks>If this media has no known duration this property should be set to 0.</remarks>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.VideoResource.Bitrate">
+            <summary>
+            The bitrate of this media (in bps), or 0 if not available.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.VideoResource.Genre">
+            <summary>
+            The genre of this media, if available.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.VideoResource.Resolution">
+            <summary>
+            The resolution (dimensions) of this media in pixels as "<i>width</i>x<i>height</i>".
+            </summary>
+            <returns>The resolution (dimensions) of this media in pixels as "<i>width</i>x<i>height</i>".</returns>
+        </member>
+        <member name="T:MediaMallTechnologies.Plugin.AudioResource">
+            <summary>
+            Contains metadata information suitable for a ContentDirectory service based on a local or online audio file.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.AudioResource.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance from deserialization.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.AudioResource.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.Collections.Specialized.NameValueCollection,System.Int64,System.Int32,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance with the given metadata properties.
+            </summary>
+            <param name="id">The unique ID of this instance. Required.</param>
+            <param name="ownerId">The unique ID of the <see cref="T:MediaMallTechnologies.Plugin.SharedMediaFolderInfo">SharedMediaFolderInfo</see>
+            that contians this instance. Required.</param>
+            <param name="title">The display name. Required.</param>
+            <param name="path">The physical path of the file, or URL to the online media. Required.</param>
+            <param name="description">An optional textual description of this media. If no description is available, set this to <b>null</b> or an empty string.</param>
+            <param name="thumbnailUrl">A URL or local path to an image icon or thumbnail for this media.</param>
+            <param name="date">The date timestamp for this media. If none is available, set to <b>DateTime.MinValue</b>.</param>
+            <param name="sourceId">A unique string that identifies this media as defined by the content provider. Required.</param>
+            <param name="mediaProperties">A list of optional string-based name/value pairs for arbitrary metadata. Can be <b>null</b>.</param>
+            <param name="duration">The length of this media in milliseconds. Set to 0 if unavailable.</param>
+            <param name="bitrate">The bitrate of this media (in bps). Set to 0 if unavailable.</param>
+            <param name="genre">The genre of this media. Set to <b>null</b> or empty string if unavailable.</param>
+            <param name="album">The album of this media. Set to <b>null</b> or empty string if unavailable.</param>
+            <param name="artist">The artist of this media. Set to <b>null</b> or empty string if unavailable.</param>
+            <param name="trackNumber">The track number of this audio, if relevant. Set to -1 if unavailable.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.AudioResource.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Overridden from superclass to serialize this instance.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AudioResource.Duration">
+            <summary>
+            The length of this media in milliseconds.
+            </summary>
+            <remarks>If this media has no known duration this property should be set to 0.</remarks>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AudioResource.Bitrate">
+            <summary>
+            The bitrate of this media (in bps), or 0 if not available.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AudioResource.Genre">
+            <summary>
+            The genre of this media, if available.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AudioResource.Album">
+            <summary>
+            The album of this media, if available.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AudioResource.Artist">
+            <summary>
+            The artist of this media, if available.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.AudioResource.TrackNumber">
+            <summary>
+            The track number of this media, if available.
+            </summary>
+        </member>
+        <member name="T:MediaMallTechnologies.Plugin.ImageResource">
+            <summary>
+            Contains metadata information suitable for a ContentDirectory service based on a local or online image file.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.ImageResource.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance from deserialization.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.ImageResource.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            Initializes a new instance with the given metadata properties.
+            </summary>
+            <param name="id">The unique ID of this instance. Required.</param>
+            <param name="ownerId">The unique ID of the <see cref="T:MediaMallTechnologies.Plugin.SharedMediaFolderInfo">SharedMediaFolderInfo</see>
+            that contians this instance. Required.</param>
+            <param name="title">The display name. Required.</param>
+            <param name="path">The physical path of the file, or URL to the online image. Required.</param>
+            <param name="description">An optional textual description of this image. If no description is available, set this to <b>null</b> or an empty string.</param>
+            <param name="thumbnailUrl">A URL or local path to an image icon or thumbnail for this image.</param>
+            <param name="date">The date timestamp for this image (eg. "Date Picture Taken"). If none is available, set to <b>DateTime.MinValue</b>.</param>
+            <param name="sourceId">A unique string that identifies this image as defined by the content provider. Required.</param>
+            <param name="mediaProperties">A list of optional string-based name/value pairs for arbitrary metadata. Can be <b>null</b>.</param>
+            <param name="dimensions">The size of this image in pixels as "<i>width</i>x<i>height</i>". Can be <b>null</b> or empty if unknown.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.ImageResource.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Overridden from superclass to serialize this instance.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.ImageResource.Dimensions">
+            <summary>
+            The dimensions of this media in pixels as "<i>width</i>x<i>height</i>".
+            </summary>
+            <returns>The dimensions of this media in pixels as "<i>width</i>x<i>height</i>".</returns>
+        </member>
+        <member name="T:MediaMallTechnologies.Plugin.SharedMediaFolderInfo">
+            <summary>
+            Contains metadata information suitable for a ContentDirectory service based on a physical or virtual folder.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.SharedMediaFolderInfo.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance from deserialization.
+            </summary>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.SharedMediaFolderInfo.#ctor(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance with the given metadata properties.
+            </summary>
+            <param name="id">The unique ID of this instance.</param>
+            <param name="ownerId">The unique ID of the SharedMediaFolderInfo that contains this instance.</param>
+            <param name="title">The display name.</param>
+            <param name="count">The number of items contained within this folder.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.SharedMediaFolderInfo.#ctor(System.String,System.String,System.String,System.Int32,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes a new instance with the given metadata properties.
+            </summary>
+            <param name="id">The unique ID of this instance.</param>
+            <param name="ownerId">The unique ID of the SharedMediaFolderInfo that contains this instance.</param>
+            <param name="title">The display name.</param>
+            <param name="count">The number of items contained within this folder.</param>
+            <param name="thumbnailUrl">Optional path or URL to an image that represents this folder. Can be <b>null</b>.</param>
+            <param name="metadata">A list of optional string-based name/value pairs for arbitrary metadata. Can be <b>null</b>.</param>
+        </member>
+        <member name="M:MediaMallTechnologies.Plugin.SharedMediaFolderInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Overridden from superclass to serialize this instance.
+            </summary>
+        </member>
+        <member name="P:MediaMallTechnologies.Plugin.SharedMediaFolderInfo.Count">
+            <summary>
+            The number of items contained within this folder. 
+            </summary>
+            <returns>
+            The number of items contained within this folder. Includes both subfolders and items.
+            </returns>
+        </member>
+    </members>
+</doc>
